@@ -1,0 +1,62 @@
+1.github.com配置本地：
+github.com 全球最大的软件资源开发共享平台/社区
+邮箱：tcj1820@163.com
+邮箱密码：tang1998..
+github.com
+账号：tcj1820@163.com
+密码：Tang1998..
+版本开发工具 oschina.com/gitlab.com/gitthub.com
+//授权本地电脑生成密钥
+	ssh-keygen -t rsa -C '邮箱'
+//在本地查找到id_rsa.pub代开复制密钥到github.com中
+//授权认证
+
+//查看当前用户名
+	git config user.name
+	
+//配置git本地用户名命令
+	git config --global user.name  'tcj1820'
+//配置git邮箱
+	git config --global user.email  'tcj1820@163.com'
+//查看当前配置邮箱
+	git config user.email
+
+验证：ssh -T git@github.com
+		yes
+2.初始化本地仓库
+	ls
+	查看当前文件夹的所有文件
+	ls -l
+	查看当前文件夹下文件的详细信息
+	cat 1.thml查看文件内容
+//创建文件：	
+	echo 'xxxx'>文件夹名字以及后缀
+	echo '第一个创建的txt'>1.txt 一个>等于覆盖
+			    >>等于追加（复制）
+//创建文件夹：
+	mkdir 文件夹名字
+//删除
+	rm 文件/文件夹名字
+//查看所有文件
+	ls -a
+git仓库
+	git init
+//初始化一个本地git仓库 当前文件夹位置生成。git
+文件夹
+//查看当地仓库状态
+	git status
+//添加文件到（本地有的文件） 缓存区
+	git add   xxx
+//提交到缓存区并添加注释
+	git commit -m '注释内容'
+//指点远程端仓库地址
+git remote add origin
+git@github.com:tcj1820/git1.git
+//推送到远程端
+git push -u origin master
+//第二次及以后提交（同一个仓库）只需要执行三步
+git add . //.指定当前文件下所有文件
+git commit -m '注释’
+git push
+
+
